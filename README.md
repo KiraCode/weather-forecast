@@ -59,16 +59,16 @@ A responsive weather application built with **ReactJS** and the **Open-Meteo Wea
 ## 🖼️ Screenshot
 
 ### Default Weather Forecast Screen
-![Default Screen](./assets/screenshots/default-screen.png "Default Weather Forecast Screen")
+![Default Screen](./src/assets/screenshots/default-screen.png "Default Weather Forecast Screen")
 
 ### Search City
-![Search City](./assets/screenshots/search-city.png "Search City")
+![Search City](./src/assets/screenshots/search-city.png "Search City")
 
 ### Current and 7-Seven Days Weather Forecast Details
-![Current & Daily Weather Forecast](./assets/screenshots/current-daily-forecast.png "Current & Daily Weather Forecast")
+![Current & Daily Weather Forecast](./src/assets/screenshots/current-daily-forecast.png "Current & Daily Weather Forecast")
 
 ### Hourly Weather Forecast Of Current Day
-![Hourly Forecast](./assets/screenshots/hourly-forecast.png "Hourly Weather Forecast")
+![Hourly Forecast](./src/assets/screenshots/hourly-forecast.png "Hourly Weather Forecast")
 
 ---
 
