@@ -3,12 +3,12 @@ import { fetchWeatherApi } from "openmeteo";
 import { weatherCodesMapping } from "./utils";
 import SearchCity from "./components/SearchCity";
 import CurrentWeather from "./components/CurrentWeather";
+import Weather from "../public/weather-svgrepo-com.svg"
 
 export default function App() {
   const [dailyForecast, setDailyForecast] = useState(null);
   const [hourlyForecast, setHourlyForecast] = useState(null);
   const [showResultScreen, setshowResultScreen] = useState();
-  const [dark, setDark] = useState("false");
   const [dataLoading, setDataLoading] = useState(false);
   const [forecastLocation, setForecastLocation] = useState({
     label: "London",
@@ -226,17 +226,41 @@ export default function App() {
   return (
     <div className="app light ">
       <SearchCity onClickHandler={clickHandler} />
-      {showResultScreen && !dataLoading && (
-        <CurrentWeather
-          currentWeatherData={
-            hourlyForecast?.length
-              ? hourlyForecast.filter((hour) => hour.isClosestTime)
-              : []
-          }
-          forecastLocation={forecastLocation}
-          dailyForecast={dailyForecast}
-          hourlyForecastData={hourlyForecast}
-        />
+      {showResultScreen ? (
+        showResultScreen &&
+        !dataLoading && (
+          <CurrentWeather
+            currentWeatherData={
+              hourlyForecast?.length
+                ? hourlyForecast.filter((hour) => hour.isClosestTime)
+                : []
+            }
+            forecastLocation={forecastLocation}
+            dailyForecast={dailyForecast}
+            hourlyForecastData={hourlyForecast}
+          />
+        )
+      ) : (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center ",
+            justifyContent: "center",
+            height: "100%",
+            width: "100%",
+          }}
+        >
+          <p style={{ color: "#fff", fontSize: "20px", marginTop: "20px" }}>
+            No Weather Details Available . . . &nbsp;
+          </p>
+          <img
+            src={Weather}
+            alt=""
+            width={"30px"}
+            height={"30px"}
+            style={{ marginBottom: "-15px", }}
+          />
+        </div>
       )}
     </div>
   );

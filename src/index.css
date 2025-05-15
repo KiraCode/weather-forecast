@@ -360,5 +360,5 @@ p {
 }
 .time-highlight {
   border-radius: 30px;
-  background: rgba(216, 218, 219, 0.603);
+  border: 5px double #fff;
 }
