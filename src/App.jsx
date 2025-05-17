@@ -251,7 +251,7 @@ export default function App() {
           }}
         >
           <p style={{ color: "#fff", fontSize: "20px", marginTop: "20px" }}>
-            No Weather Details Available . . . &nbsp;
+            Search a City to see Weather Foreast &nbsp;
           </p>
           <img
             src={Weather}
