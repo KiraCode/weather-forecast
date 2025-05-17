@@ -40,7 +40,7 @@ export default function SearchResult({ onClickHandler }) {
       {/* Search Card Layout */}
       <CardLayout>
         <div className="search-card">
-          <h1 style={{ padding: "0", margin: "0", fontSize:"45px", letterSpacing:"5px"}}>WEATHER FORECAST</h1>
+          <h1 className="weather-title">WEATHER FORECAST</h1>
           {/* Search icon and input tag */}
           <div className="search-city-container city-results">
             <img src={Search} />
