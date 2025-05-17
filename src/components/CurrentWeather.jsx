@@ -24,11 +24,7 @@ export default function CurrentWeather({
           <CardLayout>
             {currentWeatherData?.length && currentWeatherData[0] && (
               <div
-                style={{
-                  border: "1px solid white",
-                  borderRadius: "10px",
-                  padding: "15px",
-                }}
+                className="default-home-div-container"
               >
                 {/* Place, Sunny, Day and Date */}
                 <div className="default-card-city">
