@@ -36,7 +36,7 @@ export default function SearchResult({ onClickHandler }) {
   }, [searchCityText]);
 
   return (
-    <div>
+    <div style={{width:"100%"}}>
       {/* Search Card Layout */}
       <CardLayout>
         <div className="search-card">

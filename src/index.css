@@ -6,6 +6,13 @@ body {
   /* caret-color: transparent; */
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
 p {
   margin: 0px;
 }
@@ -32,14 +39,21 @@ p {
 }
 .light {
   background: url("https://st.depositphotos.com/7149512/58305/i/450/depositphotos_583055722-stock-photo-summer-ukrainian-thunderstorms-skies-storm.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 .app {
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* horizontally center all children */
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
-  background-size: cover;
-  /* width: fit-content; */
-  min-width: 100%;
-  border-radius: 10px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0 12px; /* safe padding for mobile */
 }
 .border-0 {
   border: 0px !important;
@@ -69,7 +83,6 @@ p {
   /* background-color: rgba(0, 0, 0, 0.2); */
   color: white;
   align-self: stretch;
-  width: 90%;
   margin-bottom: 10px;
 }
 
@@ -369,11 +382,22 @@ p {
 }
 
 @media screen and (max-width: 639px) {
+  .search-card,
+  .search-city-container,
+  .search-city-suggestions {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    padding: 0 12px;
+  }
+
+  .city-input {
+    font-size: 18px;
+  }
   .app {
     padding: 12px;
     border-radius: 0;
   }
-
   .search-card {
     width: 100%;
     padding: 12px 16px;
